@@ -31,7 +31,7 @@ const convertWebspaceToMarkup = (jsObject) => {
 
         markup += `<li class="webDirectoryFolder">`;
         markup += objectKey;
-        markup +=  convertJSObjectToMarkup(jsObject[objectKey]);
+        markup +=  convertWebspaceSchemaToMarkup(jsObject[objectKey]);
         markup += `</li>`;
       }
     });
@@ -77,7 +77,7 @@ function convertWebspaceSchemaToMarkup($phpArray) {
 
         $markup .= '<li class="webDirectoryFolder">';
         $markup .= $arrayKey;
-        $markup .= convertPHPArrayToMarkup($webDirectory[$arrayKey]);
+        $markup .= convertWebspaceSchemaToMarkup($webDirectory[$arrayKey]);
         $markup .= '</li>';
       }
     }

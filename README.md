@@ -4,6 +4,45 @@ Converts a web directory schema (expressed as JSON, a JS Object or as a PHP Arra
 ## Javascript: `convertWebspaceSchemaToMarkup()`
 ```js
 
+const convertWebspaceToMarkup = (jsObject) => {
+
+  let markup = \'\';
+  let filesMarkup = \'\';
+
+  const objectKeys = Object.keys(jsObject);
+
+  if (Object.keys(jsObject).length >  0) {
+
+    markup += \'<ul class="webDirectory">\';
+
+    objectKeys.forEach((objectKey) => {
+
+      if (objectKey === \'Files\') {
+
+        let files = jsObject[\'Files\'];
+
+        if (files.length > 0) {
+
+          filesMarkup += `<li class="webDirectoryFile">${files.join(\'</li><li class="webDirectoryFile">\')}</li>`;
+        }
+      }
+
+      else {
+
+        markup += `<li class="webDirectoryFolder">`;
+        markup += objectKey;
+        markup +=  convertJSObjectToMarkup(jsObject[objectKey]);
+        markup += `</li>`;
+      }
+    });
+
+    markup += filesMarkup;
+    markup += \'</ul>\';
+  }
+  
+  return markup;
+}
+
 ```
 
 _____
@@ -11,7 +50,7 @@ _____
 ## PHP: `convertWebspaceSchemaToMarkup()`
 ```php
 
-function convertWebspaceSchemaToMarkup($webDirectory) {
+function convertWebspaceSchemaToMarkup($phpArray) {
   
   $markup = '';
   $filesMarkup = '';

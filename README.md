@@ -5,12 +5,31 @@ Converts a web directory schema (expressed as JSON, a JS Object or as a PHP Arra
 
 ```css
 .webDirectory {
-}
-
-.webDirectoryFile {
+  margin-bottom: 18px;
+  padding-left: 30px;
+  white-space: nowrap;
 }
 
 .webDirectoryFolder {
+  margin-top: 12px;
+  font-weight: 900;
+  list-style-type: \'\01F4C1\000020\';
+}
+
+.webDirectoryFile {
+  font-weight: 400;
+  list-style-type: \'\01F4C4\000020\';
+}
+
+.webDirectoryFolder::marker {
+  font-size: 1.4em;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .webDirectory {
+    padding-left: 20px;
+  }
 }
 ```
 

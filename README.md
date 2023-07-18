@@ -1,5 +1,5 @@
 # convertWebspaceSchemaToMarkup()
-Converts a web directory schema (expressed as JSON, a JS Object or as a PHP Array) into HTML Markup.
+Converts a web directory schema (expressed as JSON) into a JS Object or PHP Array and then into HTML Markup.
 
 ## CSS
 

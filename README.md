@@ -6,24 +6,24 @@ Converts a web directory schema (expressed as JSON, a JS Object or as a PHP Arra
 
 const convertWebspaceToMarkup = (jsObject) => {
 
-  let markup = \'\';
-  let filesMarkup = \'\';
+  let markup = '';
+  let filesMarkup = '';
 
   const objectKeys = Object.keys(jsObject);
 
   if (Object.keys(jsObject).length >  0) {
 
-    markup += \'<ul class="webDirectory">\';
+    markup += '<ul class="webDirectory">';
 
     objectKeys.forEach((objectKey) => {
 
-      if (objectKey === \'Files\') {
+      if (objectKey === 'Files') {
 
-        let files = jsObject[\'Files\'];
+        let files = jsObject['Files'];
 
         if (files.length > 0) {
 
-          filesMarkup += `<li class="webDirectoryFile">${files.join(\'</li><li class="webDirectoryFile">\')}</li>`;
+          filesMarkup += `<li class="webDirectoryFile">${files.join('</li><li class="webDirectoryFile">')}</li>`;
         }
       }
 
@@ -37,7 +37,7 @@ const convertWebspaceToMarkup = (jsObject) => {
     });
 
     markup += filesMarkup;
-    markup += \'</ul>\';
+    markup += '</ul>';
   }
   
   return markup;

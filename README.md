@@ -88,6 +88,7 @@ _____
 
 ## PHP: `convertWebspaceSchemaToMarkup($webDirectory)`
 ```php
+<?php
 
 function convertWebspaceSchemaToMarkup($webDirectory) {
   
@@ -131,4 +132,5 @@ function convertWebspaceSchemaToMarkup($webDirectory) {
 $webDirectory = json_decode(webspaceSchemaJSON, TRUE);
 $webDirectoryMarkup = convertWebspaceSchemaToMarkup($webDirectory);
 
+?>
 ```

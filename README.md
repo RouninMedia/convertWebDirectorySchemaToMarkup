@@ -1,14 +1,14 @@
-# `convertWebDirectorySchemaToMarkup()`
+# convertWebDirectorySchemaToMarkup()
 Converts a web directory schema (expressed as JSON, a JS Object or as a PHP Array) into HTML Markup.
 
-## Javascript: convertWebDirectorySchemaToMarkup
+## Javascript: `convertWebspaceSchemaToMarkup()`
 ```js
 
 ```
 
 _____
 
-## PHP: convertWebDirectorySchemaToMarkup
+## PHP: `convertWebspaceSchemaToMarkup()`
 ```php
 
 function convertWebDirectorySchemaToMarkup($webDirectory) {

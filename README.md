@@ -11,7 +11,7 @@ _____
 ## PHP: `convertWebspaceSchemaToMarkup()`
 ```php
 
-function convertWebDirectorySchemaToMarkup($webDirectory) {
+function convertWebspaceSchemaToMarkup($webDirectory) {
   
   $markup = '';
   $filesMarkup = '';

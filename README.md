@@ -47,10 +47,10 @@ const convertWebspaceToMarkup = (jsObject) => {
 
 _____
 
-## PHP: `convertWebspaceSchemaToMarkup()`
+## PHP: `convertWebspaceSchemaToMarkup($webDirectory)`
 ```php
 
-function convertWebspaceSchemaToMarkup($phpArray) {
+function convertWebspaceSchemaToMarkup($webDirectory) {
   
   $markup = '';
   $filesMarkup = '';

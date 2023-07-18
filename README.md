@@ -39,7 +39,7 @@ ______
 ## Javascript: `convertWebspaceSchemaToMarkup()`
 ```js
 
-const convertWebspaceToMarkup = (webDirectory) => {
+const convertWebspaceSchemaToMarkup = (webDirectory) => {
 
   let markup = '';
   let filesMarkup = '';
@@ -77,6 +77,9 @@ const convertWebspaceToMarkup = (webDirectory) => {
   
   return markup;
 }
+
+let webDirectory = JSON.parse(webspaceSchemaJSON);
+let webDirectoryMarkup = convertWebspaceSchemaToMarkup(webDirectory);
 
 ```
 
@@ -124,5 +127,8 @@ function convertWebspaceSchemaToMarkup($webDirectory) {
 
   return $markup;
 }
+
+$webDirectory = json_decode(webspaceSchemaJSON, TRUE);
+$webDirectoryMarkup = convertWebspaceSchemaToMarkup($webDirectory);
 
 ```

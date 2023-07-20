@@ -1,5 +1,5 @@
-# convertWebspaceSchemaToMarkup()
-Converts a web directory schema (expressed as JSON) into a JS Object or PHP Array and then into HTML Markup.
+# markupWebspace()
+Takes a JSON model of a web directory and converts into a JS Object or PHP Array and then into HTML Markup. 
 
 ## CSS
 
@@ -36,7 +36,7 @@ Converts a web directory schema (expressed as JSON) into a JS Object or PHP Arra
 ______
 
 
-## Javascript: `convertWebspaceSchemaToMarkup()`
+## Javascript: `markupWebspace()`
 ```js
 
 const convertWebspaceSchemaToMarkup = (webDirectory) => {
@@ -86,7 +86,7 @@ let webDirectoryMarkup = convertWebspaceSchemaToMarkup(webDirectory);
 _____
 
 
-## PHP: `convertWebspaceSchemaToMarkup($webDirectory)`
+## PHP: `markupWebspace($webDirectory)`
 ```php
 
 function convertWebspaceSchemaToMarkup($webDirectory) {

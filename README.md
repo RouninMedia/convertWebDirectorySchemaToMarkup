@@ -1,5 +1,5 @@
 # markupWebspace()
-Takes a JSON model of a web directory and converts into a JS Object or PHP Array and then into HTML Markup. 
+Takes a JSON model of a web directory and converts it first into a JS Object or PHP Array and then into HTML Markup. 
 
 ## CSS
 
